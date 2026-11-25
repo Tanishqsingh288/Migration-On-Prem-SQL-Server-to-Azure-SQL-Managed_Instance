@@ -9,7 +9,7 @@ This project demonstrates an end-to-end logical database migration from an on-pr
 * **Assessment & Feasibility:** Evaluated source database compatibility, schema readiness, and Managed Instance feasibility using **Azure Migrate** assessment reports prior to cutover.
 * **Infrastructure as Code (IaC):** Provisioned all required cloud networking and compute dependencies (VNet, delegated `/27` subnet, NSGs, User-Defined Route Tables, and Azure SQL Managed Instance) using modular **Bicep** templates.
 * **Automation & Migration Tooling:** Used **PowerShell** / batch automation alongside **Azure CLI** and **`SqlPackage.exe`** to export the source database into a compressed `.bacpac` archive and stream it directly into the target Managed Instance over TLS (Port `3342`).
-* **Workload Scale:** Validated against a ~15 GB relational banking workload (`45M+` rows across 12 tables) with post-migration row parity (`sys.partitions`), `DBCC CHECKDB` verification, and immediate resource teardown for cost governance.
+* **Workload Scale:** Validated against a ~15 GB relational banking workload (`45M+` rows across 12 tables) with post-migration row parity  verification, and immediate resource teardown for cost governance.
 
 ---
 
